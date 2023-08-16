@@ -14606,7 +14606,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <ul>
 <li>Importing necessary python library</li>
 <li>Import data from our local machine</li>
-<li>Gather usefeul insight &amp; information for future step.</li>
+<li>Gather useful insight &amp; information for future step.</li>
 </ul>
 
 </div>
@@ -14757,7 +14757,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="c1"># Concatenate while reading through files in the directory</span>
 <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">all_files</span><span class="p">:</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#header=0, because we got header in our csv file</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#header=0, because the csv file has header</span>
     <span class="n">empty_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 <span class="n">merged_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">empty_df</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15047,9 +15047,9 @@ memory usage: 8.6+ MB
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Insight from data information review: <br></p>
 <ol>
-<li>Theres about hundred difference between entries and Non-Null Count. Means we need to handle this missing value <br><br></li>
-<li>The Non-Null Count for each columns have the same number, we can conclude all NULL/NaN values is occur in a same row, so the best decision to handle this is to remove the rows instead replacing it<br><br></li>
-<li>All the data type was object, we need to change some column data type to do further data transformation (perform mathematical operation, etc)<br><br></li>
+<li>Theres about hundred difference between entries and Non-Null Count. Means we need to handle this missing values <br><br></li>
+<li>The Non-Null Count for each column have the same number, we can conclude all NULL/NaN values is occur in a same row, so the best decision to handle this is by remove the rows instead replacing it<br><br></li>
+<li>All the data type was object, we need to change some column data type to do further data transformation (perform mathematical operation, etc.)<br><br></li>
 <li>count of Order ID and unique of Order ID is not match, means this [id]column is not primary key with unique value
 <br></li>
 </ol>
@@ -15064,7 +15064,20 @@ memory usage: 8.6+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning">&#182;</a></h2><p>The main purposes in this step will be remove errors that might distort or damage the accuracy of your analysis. This includes tasks like standardizing inputs, deleting duplicate values or empty cells, and fixing data inaccuracies.</p>
+<h2 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning">&#182;</a></h2><p>The main purposes in this step will be remove errors that might distort or damage the accuracy of your analysis. This includes tasks like standardizing inputs, handling empty cells or missing values, handling duplicate values and fixing data inaccuracies.<br><br>
+Because we use pandas dataframe, it already automatically trim double space and space at the start and the end of our string values. so we dont need trim step.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>With insight from our Data Discovery, we already decide way to handle our data missing values is by removing it.</p>
 
 </div>
 </div>
@@ -15247,8 +15260,8 @@ memory usage: 8.6+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If we take a look in the raw file, we can found that heading of merged files is randomly repeated in data rows.<br>
-So we can clean this by make sure all the data contained in Order ID is number not a string.<br>
+<p>If we take a look in the raw file, we can found that heading (string data type) of merged files is randomly repeated in data rows.<br>
+So we can fix data inaccuracies by make sure all the data contained in Order ID is number not a string.<br>
 <br></p>
 
 </div>
@@ -15291,7 +15304,7 @@ So we can clean this by make sure all the data contained in Order ID is number n
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\renal\AppData\Local\Temp\ipykernel_5748\2231170803.py:8: SettingWithCopyWarning: 
+<pre>C:\Users\renal\AppData\Local\Temp\ipykernel_11692\2231170803.py:8: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -15369,11 +15382,19 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We could see the rows is decreasing from 186305 to 185950, means we already clean that unwanted value <br>
-Now, we will remove duplicated data. with insight from Data Discovery phase, the right decision is using drop_duplicate() function with default parameter (it will remove based on all columns) <br>
-If the Order ID column is primary key with unique value, we wont use default parameter instead use remove by Order ID column
-<br>
- <br></p>
+<p>We could see the rows is decreasing from 186305 to 185950, means we already clean that unwanted value <br><br></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Check count of duplicate values in the dataframe</p>
 
 </div>
 </div>
@@ -15386,9 +15407,8 @@ If the Order ID column is primary key with unique value, we wont use default par
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove duplicate values</span>
-<span class="n">sales_cleaned</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
-<span class="n">sales_cleaned</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">duplicateRows</span> <span class="o">=</span> <span class="n">sales_cleaned</span><span class="p">[</span><span class="n">sales_cleaned</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+<span class="n">duplicateRows</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -15412,7 +15432,131 @@ If the Order ID column is primary key with unique value, we wont use default par
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>185950</pre>
+<pre>264</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ids2</span><span class="o">=</span> <span class="n">duplicateRows</span><span class="p">[</span><span class="s1">'Order ID'</span><span class="p">]</span>
+<span class="n">sales_cleaned</span><span class="p">[</span><span class="n">sales_cleaned</span><span class="p">[</span><span class="s1">'Order ID'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">ids2</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'Order ID'</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>68422</th>
+      <td>142071</td>
+      <td>AA Batteries (4-pack)</td>
+      <td>1</td>
+      <td>3.84</td>
+      <td>01/17/19 23:02</td>
+      <td>131 2nd St, Boston, MA 02215</td>
+    </tr>
+    <tr>
+      <th>68421</th>
+      <td>142071</td>
+      <td>AA Batteries (4-pack)</td>
+      <td>1</td>
+      <td>3.84</td>
+      <td>01/17/19 23:02</td>
+      <td>131 2nd St, Boston, MA 02215</td>
+    </tr>
+    <tr>
+      <th>71673</th>
+      <td>145143</td>
+      <td>Lightning Charging Cable</td>
+      <td>1</td>
+      <td>14.95</td>
+      <td>01/06/19 03:01</td>
+      <td>182 Jefferson St, San Francisco, CA 94016</td>
+    </tr>
+    <tr>
+      <th>71672</th>
+      <td>145143</td>
+      <td>Lightning Charging Cable</td>
+      <td>1</td>
+      <td>14.95</td>
+      <td>01/06/19 03:01</td>
+      <td>182 Jefferson St, San Francisco, CA 94016</td>
+    </tr>
+    <tr>
+      <th>73358</th>
+      <td>146765</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600</td>
+      <td>01/21/19 11:23</td>
+      <td>918 Highland St, New York City, NY 10001</td>
+    </tr>
+    <tr>
+      <th>73357</th>
+      <td>146765</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600</td>
+      <td>01/21/19 11:23</td>
+      <td>918 Highland St, New York City, NY 10001</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -15428,8 +15572,112 @@ If the Order ID column is primary key with unique value, we wont use default par
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The value of row count still same. I conclude there was no duplicate values in the data.
-<br></p>
+<p>With this check, we found there's occur several duplicate values.
+Before we decide a way to handle these duplicate values, we need to understand and interpet the dataset.</p>
+<ol>
+<li>The data is record any purchasement into a row.</li>
+<li>One Order ID should have One Order Date.</li>
+<li>One Order ID should have One Purchase Address.</li>
+<li>One Order ID could have several different products.</li>
+</ol>
+<p>With these 4 points, we can conclude that if Order ID have same Product recorded different rows doesnt make sense.
+So we decide to remove duplicate rows that duplicated accross all column.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sales_cleaned</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>185950</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove duplicate values</span>
+<span class="n">sales_cleaned</span><span class="o">=</span><span class="n">sales_cleaned</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">sales_cleaned</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>185686</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Our dataset rows decreased by 264. and now has 185686 rows after deletion.</p>
 
 </div>
 </div>
@@ -15456,7 +15704,7 @@ If the Order ID column is primary key with unique value, we wont use default par
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Change data type for some columns</span>
@@ -15491,16 +15739,16 @@ If the Order ID column is primary key with unique value, we wont use default par
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 185950 entries, 0 to 186849
+Int64Index: 185686 entries, 0 to 186849
 Data columns (total 6 columns):
  #   Column            Non-Null Count   Dtype         
 ---  ------            --------------   -----         
- 0   Order ID          185950 non-null  int32         
- 1   Product           185950 non-null  object        
- 2   Quantity Ordered  185950 non-null  float64       
- 3   Price Each        185950 non-null  float64       
- 4   Order Date        185950 non-null  datetime64[ns]
- 5   Purchase Address  185950 non-null  object        
+ 0   Order ID          185686 non-null  int32         
+ 1   Product           185686 non-null  object        
+ 2   Quantity Ordered  185686 non-null  float64       
+ 3   Price Each        185686 non-null  float64       
+ 4   Order Date        185686 non-null  datetime64[ns]
+ 5   Purchase Address  185686 non-null  object        
 dtypes: datetime64[ns](1), float64(2), int32(1), object(2)
 memory usage: 9.2+ MB
 </pre>
@@ -15528,7 +15776,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a dictionary for month mapping</span>
@@ -15567,7 +15815,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
@@ -15678,7 +15926,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sales_cleaned</span><span class="p">[</span><span class="s2">"Total Cost"</span><span class="p">]</span><span class="o">=</span><span class="n">sales_cleaned</span><span class="p">[</span><span class="s2">"Quantity Ordered"</span><span class="p">]</span><span class="o">*</span><span class="n">sales_cleaned</span><span class="p">[</span><span class="s2">"Price Each"</span><span class="p">]</span>
@@ -15700,7 +15948,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15805,10 +16053,10 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Re-Arrange our dataframe for better viz</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Re-Arrange our dataframe</span>
 <span class="n">sales_cleaned</span> <span class="o">=</span> <span class="n">sales_cleaned</span><span class="p">[[</span><span class="s1">'Order ID'</span><span class="p">,</span> <span class="s1">'Order Date'</span><span class="p">,</span><span class="s1">'Month'</span><span class="p">,</span><span class="s1">'Product'</span><span class="p">,</span><span class="s1">'Quantity Ordered'</span><span class="p">,</span><span class="s1">'Price Each'</span><span class="p">,</span><span class="s1">'Total Cost'</span><span class="p">,</span>
                                <span class="s1">'Purchase Address'</span><span class="p">]]</span>
 <span class="n">sales_cleaned</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15829,7 +16077,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15946,7 +16194,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract Purchase Address by comma (,) delimited</span>
@@ -15973,7 +16221,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -16114,7 +16362,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a dictionary for season mapping</span>
@@ -16153,7 +16401,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -16300,7 +16548,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#This will return NaN if there any Postal Code with digits other than 5 digits</span>
@@ -16324,7 +16572,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
@@ -16459,7 +16707,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We find the rows that Postal Code got NaN value</span>
@@ -16482,7 +16730,7 @@ memory usage: 9.2+ MB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -16561,7 +16809,7 @@ memory usage: 9.2+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sales_cleaned</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">"C:/Users/renal/Documents/Renaldo's File/Data Analyst Portofolio -Renaldo Livando/Project1 Data Wrangling using Python/out/cleaned_electronic_sales_data.csv"</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
