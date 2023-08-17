@@ -15,14 +15,14 @@ Subject Covered:
   * Import data from our local machine
   * Gather useful insight & information for future step
 * Data Cleaning
- * Standardizing inputs
- * Handling empty cells or missing values
- * Handling duplicate values
- * Fixing data inaccuracies
+  * Standardizing inputs
+  * Handling empty cells or missing values
+  * Handling duplicate values
+  * Fixing data inaccuracies
 * Data Transformation
- * Data Structuring
- * Attribute Construction
- * Generalization
+  * Data Structuring
+  * Attribute Construction
+  * Generalization
 * Data Enriching
 * Data Validating
 * Data Publishing
