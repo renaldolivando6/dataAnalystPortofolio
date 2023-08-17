@@ -6,7 +6,7 @@ Tools used in this Portofolio: Python, SQL, Tableau and Power BI
 
 
 ##  Project 1 - Data Wrangling using Python
-Data wrangling describes a series of processes designed to explore, transform, and validate raw datasets from their messy and complex forms into high-quality data with good integrity and consistency into produce valuable insights and guide business decisions in later analytics purposes.<br><br>
+Data wrangling describes a series of processes designed to explore, transform, and validate raw datasets from their messy and complex forms into high-quality data with good integrity and consistency into produce valuable insights and guide business decisions in later analytics purposes. In this secton We will perform this process using Python with Jupyter Notebook. <br><br>
 Python library used in this project: pandas, numpy, os, glob
 
 Subject Covered:
@@ -28,7 +28,23 @@ Subject Covered:
 * Data Publishing
 
 ## Project 2 - Data Wrangling using SQL
+Data wrangling describes a series of processes designed to explore, transform, and validate raw datasets from their messy and complex forms into high-quality data with good integrity and consistency into produce valuable insights and guide business decisions in later analytics purposes. In this secton We will perform this process using SQL with MySQL Workbench and MySQL Console. <br><br>
 
+Subject Covered:
+* Data Discovery
+  * Import data from our local machine
+  * Gather useful insight & information for future step
+* Data Cleaning
+  * Handling empty cells or missing values
+  * Handling duplicate values
+  * Trimming string column
+* Data Transformation
+  * Attribute Construction
+  * Generalization
+  * Re-Arrange
+* Data Enriching
+* Data Validating
+* Data Publishing
 ## Project 3 - Data Analysis using Python
 ## Project 4 - Data Analysis using SQL
 ## Project 5 - Data Visualization using Tableau
