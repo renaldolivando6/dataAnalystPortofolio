@@ -49,12 +49,12 @@ In this Project, we will gather insight from data we cleaned on Project 1 or Pro
 We will using several question guide to gather useful information from our data<br>
 
 Question guide list:
-*Question 1: What was the best time for sales?
-*Question 2: Which city sold the most product?
-*Question 3: What time should we display advertisements to maximize likelihood of customer's buying product?
-*Question 4: What products are most often sold together?
-*Question 5: What product sold the most?
-*Question 6: Is there any correlation between quantity sold of product and product price?
+* Question 1: What was the best time for sales?
+* Question 2: Which city sold the most product?
+* Question 3: What time should we display advertisements to maximize likelihood of customer's buying product?
+* Question 4: What products are most often sold together?
+* Question 5: What product sold the most?
+* Question 6: Is there any correlation between quantity sold of product and product price?
 
 ## Project 4 - Data Analysis using SQL
 ## Project 5 - Data Visualization using Tableau
