@@ -44,9 +44,9 @@ Subject Covered:
 * Data Validating
 * Data Publishing
 ## Project 3 - Data Analysis and Data Visualization using Python
-The goal of data analysis is to give businesses actionable insights from the large amounts of data they receive every day. These insights can help organizations make decisions, solve problems, understand the needs of customers and identify future trends.
-In this Project, we will gather insight from data we cleaned on Project 1 or Project 2
-We will using several question guide to gather useful information from our data
+The goal of data analysis is to give businesses actionable insights from the large amounts of data they receive every day. These insights can help organizations make decisions, solve problems, understand the needs of customers and identify future trends.<br><br>
+In this Project, we will gather insight from data we cleaned on Project 1 or Project 2<br>
+We will using several question guide to gather useful information from our data<br>
 
 *Question 1: What was the best time for sales?
 *Question 2: Which city sold the most product?
