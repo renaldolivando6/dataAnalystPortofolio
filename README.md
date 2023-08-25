@@ -48,6 +48,7 @@ The goal of data analysis is to give businesses actionable insights from the lar
 In this Project, we will gather insight from data we cleaned on Project 1 or Project 2<br>
 We will using several question guide to gather useful information from our data<br>
 
+Question guide list:
 *Question 1: What was the best time for sales?
 *Question 2: Which city sold the most product?
 *Question 3: What time should we display advertisements to maximize likelihood of customer's buying product?
