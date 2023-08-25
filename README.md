@@ -45,7 +45,9 @@ Subject Covered:
 * Data Publishing
 ## Project 3 - Data Analysis and Data Visualization using Python
 The goal of data analysis is to give businesses actionable insights from the large amounts of data they receive every day. These insights can help organizations make decisions, solve problems, understand the needs of customers and identify future trends.<br><br>
-In this Project, we will gather insight from data we cleaned on Project 1 or Project 2<br>
+In this Project, we will gather insight from data we cleaned on Project 1 or Project 2, we will gather insight by performing table/dataframe calculation and  simple data visualization <br>
+
+Python library used in this project: pandas, numpy, matplotlib and seaborn
 We will using several question guide to gather useful information from our data<br>
 
 Question guide list:
