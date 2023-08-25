@@ -45,10 +45,10 @@ Subject Covered:
 * Data Publishing
 ## Project 3 - Data Analysis and Data Visualization using Python
 The goal of data analysis is to give businesses actionable insights from the large amounts of data they receive every day. These insights can help organizations make decisions, solve problems, understand the needs of customers and identify future trends.<br><br>
-In this Project, we will gather insight from data we cleaned on Project 1 or Project 2, we will gather insight by performing table/dataframe calculation and  simple data visualization. We will perform these process using Python with Jupyter Notebook. <br><br>
+In this Project, we will gather insight from data we cleaned on Project 1 or Project 2, we will gather insight by performing table/data frame calculation and  simple data visualization. We will perform these process using Python with Jupyter Notebook. <br><br>
 
 Python library used in this project: pandas, numpy, matplotlib and seaborn
-We will using several question guide to gather useful information from our data<br>
+We will be using several question guides to gather useful information from our data<br>
 
 Question guide list:
 * Question 1: What was the best time for sales?
@@ -60,9 +60,9 @@ Question guide list:
 
 ## Project 4 - Data Analysis using SQL
 The goal of data analysis is to give businesses actionable insights from the large amounts of data they receive every day. These insights can help organizations make decisions, solve problems, understand the needs of customers and identify future trends.<br><br>
-In this Project, we will gather insight from data we cleaned on Project 1 or Project 2, we will gather insight by performing table/dataframe calculation. We will perform this process using SQL with MySQL Workbench. <br><br>
+In this Project, we will gather insight from data we cleaned on Project 1 or Project 2, we will gather insight by performing table/data frame calculation. We will perform this process using SQL with MySQL Workbench. <br><br>
 
-We will using several question guide to gather useful information from our data<br>
+We will be using several question guides to gather useful information from our data<br>
 
 Question guide list:
 * Question 1: What was the best time for sales?
