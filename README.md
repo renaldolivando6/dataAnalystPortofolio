@@ -43,7 +43,18 @@ Subject Covered:
 * Data Enriching
 * Data Validating
 * Data Publishing
-## Project 3 - Data Analysis using Python
+## Project 3 - Data Analysis and Data Visualization using Python
+The goal of data analysis is to give businesses actionable insights from the large amounts of data they receive every day. These insights can help organizations make decisions, solve problems, understand the needs of customers and identify future trends.
+In this Project, we will gather insight from data we cleaned on Project 1 or Project 2
+We will using several question guide to gather useful information from our data
+
+*Question 1: What was the best time for sales?
+*Question 2: Which city sold the most product?
+*Question 3: What time should we display advertisements to maximize likelihood of customer's buying product?
+*Question 4: What products are most often sold together?
+*Question 5: What product sold the most?
+*Question 6: Is there any correlation between quantity sold of product and product price?
+
 ## Project 4 - Data Analysis using SQL
 ## Project 5 - Data Visualization using Tableau
 ## Project 6 - Data Visualization using Power BI
