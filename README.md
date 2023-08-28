@@ -75,13 +75,18 @@ Question guide list:
 ## Project 5 - Data Visualization using Tableau
 Data visualization is prompting a cultural shift toward more analytical, data-driven organizations by empowering users to explore their data.
 
-In this project we using Tableau Public to perform visualization by making a dashboard. We using data from Project 1 & Project 2.
+In this project we using Tableau Public to perform dynamic visualization by making a dashboard. We using data from Project 1 & Project 2.
 
 The main visualization in this project are:
 * Moving Average Sales
-        * test
+  * Using line graph, could highlight the range of time we desired, and control the moving average by input desired value
+  * Display tooltips that show performance per city
 * Store Performance
+  * Display total sales, number of customers, and product sold in time range we selected on the line graph
 * Total Unit Sold by Product
+  * Display total unit sold per product and correlation with the product price
 * Product Distribution
+  * Display product distribution in map visualization by state
+  * Display tooltips that show performance per city
 
 ## Project 6 - Data Visualization using Power BI
