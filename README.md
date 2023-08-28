@@ -90,3 +90,16 @@ The main visualization in this project are:
   * Display tooltips that show performance per city
 
 ## Project 6 - Data Visualization using Power BI
+Data visualization is prompting a cultural shift toward more analytical, data-driven organizations by empowering users to explore their data.
+
+In this project we using Power BI to perform dynamic visualization by making a dashboard. We using data from Project 1 & Project 2.
+
+The main visualization in this project are:
+* Total Sales by Month
+  * Using line graph, could select the time we desired
+* Store Performance
+  * Display total sales, total orders, and total unit sold in time range we selected on the line graph
+* Total Unit Sold by Product
+  * Display total unit sold per product and correlation with the product price
+* Order Distribution
+  * Display orders distribution in map visualization by state
