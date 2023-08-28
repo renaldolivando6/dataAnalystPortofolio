@@ -73,4 +73,15 @@ Question guide list:
 * Question 6: Is there any correlation between quantity sold of product and product price?
   
 ## Project 5 - Data Visualization using Tableau
+Data visualization is prompting a cultural shift toward more analytical, data-driven organizations by empowering users to explore their data.
+
+In this project we using Tableau Public to perform visualization by making a dashboard. We using data from Project 1 & Project 2.
+
+The main visualization in this project are:
+* Moving Average Sales
+ * test
+* Store Performance
+* Total Unit Sold by Product
+* Product Distribution
+
 ## Project 6 - Data Visualization using Power BI
