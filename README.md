@@ -79,7 +79,7 @@ In this project we using Tableau Public to perform visualization by making a das
 
 The main visualization in this project are:
 * Moving Average Sales
- * test
+  * test
 * Store Performance
 * Total Unit Sold by Product
 * Product Distribution
