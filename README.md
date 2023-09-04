@@ -103,3 +103,23 @@ The main visualization in this project are:
   * Display total unit sold per product and correlation with the product price
 * Order Distribution
   * Display orders distribution in map visualization by state
+
+## Project 7 - Practical Statistics Python
+## Project 8 - Problem Solving SQL with Various Company Cases
+In practical use of SQL, we must able to write a query that can transform our dataset into new dataset that contains information of what the company needed.
+
+This project contains several problem or taskes from various field of company and the solution given with SQL or T-SQL queries.
+
+Subject Covered for each case:
+* Case 1 - Technology Company
+  * Common Table Expression (CTE), Filter, Aggregation, CASE WHEN
+* Case 2 - Online Retailing Company
+  * Formatting, Window Function
+* Case 3 - Education Institution
+  * Common Table Expression (CTE), Window Function, Inner Join, Date Function, Aggregation
+* Case 4 - Skin Care Online Store
+  * Left Join, IS NULL
+* Case 5 - Facebook (Social Media)
+  * Common Table Expression (CTE), Union, Aggregation
+* Case 6 - Amazon
+  * Self Join (filtering dataset), Date Function
